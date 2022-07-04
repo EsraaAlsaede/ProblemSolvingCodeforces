@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    int size=0;
+    int count=0;
+    std::cin >> size;
+    int array[size];
+    for(int i=0;i<size;i++){
+        cin>>array[i];
+    }
+    if(array[0]==10||array[0]==01){count++;}
+    for(int i=0;i<size;i++){
+        if(array[i]==10 &&array[i+1]==10){count=count;}
+        else if(array[i]==10 &&array[i+1]==01){count++;}
+        else if(array[i]==01 &&array[i+1]==01){count=count;}
+        else if(array[i]==01 &&array[i+1]==10){count++;}
+        }
+        std::cout << count << std::endl;
+    return 0;
+}
