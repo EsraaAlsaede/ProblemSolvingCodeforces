@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n=0;
+    cin>>n;
+    string word[n];
+    int counter[n]={0};
+    for(int i=0;i<n;i++){
+    cin>>word[i];
+    }
+    for(int i=0;i<n;i++){
+        if(word[i].length()>10){
+        for (int j = 1; j < word[i].size()-1; j++){
+        counter[i]++;
+        }
+        cout<<word[i].at(0)<<counter[i]<<word[i].back()<<endl;
+        }else{
+        cout << word[i]<<endl;
+        }
+    }
+   return 0;
+}
